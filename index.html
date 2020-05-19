@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/style.css">
+  <title>Currency Exchange</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Currency Exchange</h1>
+    <div class="ex-container">
+      <div class="from">
+            <span>From</span>
+            <select class="currency" id="from">
+              <option value="USD" selected>USD</option>
+              <option value="JPY">JPY</option>
+              <option value="BGN">BGN</option>
+              <option value="CZK">CZK</option>
+              <option value="DKK">DKK</option>
+              <option value="GBP">GBP</option>
+              <option value="HUF">HUF</option>
+              <option value="PLN">PLN</option>
+              <option value="RON">RON</option>
+              <option value="SEK">SEK</option>
+              <option value="CHF">CHF</option>
+              <option value="ISK">ISK</option>
+              <option value="NOK">NOK</option>
+              <option value="HRK">HRK</option>
+              <option value="RUB">RUB</option>
+              <option value="TRY">TRY</option>
+              <option value="AUD">AUD</option>
+              <option value="BRL">BRL</option>
+              <option value="CAD">CAD</option>
+              <option value="CNY">CNY</option>
+              <option value="HKD">HKD</option>
+              <option value="IDR">IDR</option>
+              <option value="ILS">ILS</option>
+              <option value="INR">INR</option>
+              <option value="INR">INR</option>
+              <option value="KRW">KRW</option>
+              <option value="MXN">MXN</option>
+              <option value="MYR">MYR</option>
+              <option value="NZD">NZD</option>
+              <option value="PHP">PHP</option>
+              <option value="SGD" SELECTED>SGD</option>
+              <option value="THB">THB</option>
+              <option value="ZAR">ZAR</option>
+            </select>
+          </div>
+          <div class="swap">
+            <button id="swap-btn"><i class="fas fa-exchange-alt fa-2x"></i></button>
+          </div>
+          <div class="to">
+            <span>To</span>
+            <select class="currency" id="to">
+              <option value="USD">USD</option>
+              <option value="JPY">JPY</option>
+              <option value="BGN">BGN</option>
+              <option value="CZK">CZK</option>
+              <option value="DKK">DKK</option>
+              <option value="GBP">GBP</option>
+              <option value="HUF">HUF</option>
+              <option value="PLN">PLN</option>
+              <option value="RON">RON</option>
+              <option value="SEK">SEK</option>
+              <option value="CHF">CHF</option>
+              <option value="ISK">ISK</option>
+              <option value="NOK">NOK</option>
+              <option value="HRK">HRK</option>
+              <option value="RUB">RUB</option>
+              <option value="TRY">TRY</option>
+              <option value="AUD" selected>AUD</option>
+              <option value="BRL">BRL</option>
+              <option value="CAD">CAD</option>
+              <option value="CNY">CNY</option>
+              <option value="HKD">HKD</option>
+              <option value="IDR">IDR</option>
+              <option value="ILS">ILS</option>
+              <option value="INR">INR</option>
+              <option value="INR">INR</option>
+              <option value="KRW">KRW</option>
+              <option value="MXN">MXN</option>
+              <option value="MYR">MYR</option>
+              <option value="NZD">NZD</option>
+              <option value="PHP">PHP</option>
+              <option value="SGD">SGD</option>
+              <option value="THB">THB</option>
+              <option value="ZAR">ZAR</option>
+            </select>
+          </div>
+        </div>
+      <input type="number" id="amount" min="0" value="1.00">
+      <button id="convert-btn">Convert</button>
+      <div class="conversion"></div>
+      <div class="rate"></div>
+      <a href="https://github.com/mxtang3/currency_exchange" target="_blank" ><i class="fab fa-github fa-2x"></i></a>
+    </div>
+  <script src="js/app.js"></script>
+</body>
+</html>

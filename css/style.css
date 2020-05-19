@@ -1,0 +1,127 @@
+:root {
+  --primary-color:#ff8c00;
+}
+
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  font-family: 'DM Mono', sans-serif;
+}
+
+.container {
+  width: 400px;
+  min-height:50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+h1 {
+  margin-bottom: 40px;
+}
+
+
+.ex-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.from, .to {
+  position: relative;
+  margin: 0 auto;
+}
+
+span {
+  position: absolute;
+  transform: translate(0%,-100%);
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+
+.currency {
+  cursor: pointer;
+  border: 0;
+  font-size: 1.2rem;
+  padding: 20px;
+}
+
+.currency:focus {
+  outline: 0;
+}
+.swap {
+  align-self: center;
+}
+
+#swap-btn {
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  color:  var(--primary-color);
+}
+
+
+
+
+#amount, #convert-btn {
+  margin: 10px;
+  border: 1px solid #000;
+  display: block;
+  margin: 10px auto;
+}
+
+#amount:focus, #convert-btn:focus {
+  outline: 0;
+}
+
+#convert-btn {
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  padding: 5px 30px;
+  border-radius: 2px;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+}
+
+#convert-btn:hover {
+  background: var(--primary-color);
+}
+
+
+input[type="number"] {
+  text-align: center;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 2.5px;
+}
+
+.main-container {
+  border-bottom: 1px solid #dedede;
+}
+
+ a {
+  display:block;
+  color: var(--primary-color);
+  align-self: flex-end;
+}
+
+.conversion {
+  border-bottom: 1px solid #000;
+  padding-bottom: 5px;
+  border-color: #dedede;
+}
+
+.rate {
+  margin: 5px 0;
+  font-size: 0.8rem;
+  text-align:center;
+  color: var(--primary-color);
+}

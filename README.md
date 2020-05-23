@@ -7,5 +7,5 @@ Powered by [exchangeratesapi.io](https://exchangeratesapi.io/).
 
 ## Version 1
 <p align="center">
-  <img src="img/v1.png" height="80%"/>
+  <img src="src/img/v1.png" height="80%"/>
 </p>

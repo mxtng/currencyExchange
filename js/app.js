@@ -3,8 +3,6 @@ const swap = document.querySelector('#swap-btn');
 const currencyFrom = document.querySelector('#from');
 const currencyTo = document.querySelector('#to');
 
-
-
 // Event Listener
 swap.addEventListener('click', () => {
   const temp = currencyFrom.value;
@@ -13,26 +11,23 @@ swap.addEventListener('click', () => {
 })
 
 
-
 btn.addEventListener('click', () => {
   const showConversion = document.querySelector('.conversion');
   const showRate = document.querySelector('.rate');
   const userInput = document.querySelector('#amount').value;
 
-  fetch(`https://api.exchangeratesapi.io/latest?base=${currencyFrom.value}`)
-    .then(res => res.json())
-    .then(data => {
-  
-      // const baseRate = data.rates[`${currencyFrom.value}`];
-      const convertRate = data.rates[`${currencyTo.value}`];
-      const convertedAmount =   (convertRate * parseFloat(userInput)).toFixed(2);
-      console.log(convertedAmount)
+  const req = async () => {
+    const res = await fetch(`https://api.exchangeratesapi.io/latest?base=${currencyFrom.value}`);
+    const json = await res.json();
 
+    const convertRate = json.rates[`${currencyTo.value}`];
+    const convertedAmount =   (convertRate * parseFloat(userInput)).toFixed(2);
 
-      showConversion.innerText = `${currencyFrom.value} ${userInput} = ${currencyTo.value} ${convertedAmount}`;
-      showRate.innerHTML = `Last Updated: ${data.date} <br> ${currencyFrom.value} 1 =  ${currencyTo.value} ${convertRate}`;
+    showConversion.innerText = `${currencyFrom.value} ${userInput} = ${currencyTo.value} ${convertedAmount}`;
+    showRate.innerHTML = `Last Updated: ${json.date} <br> ${currencyFrom.value} 1 =  ${currencyTo.value} ${convertRate}`;
+  };
 
-    });
+  req();
 
  });
 

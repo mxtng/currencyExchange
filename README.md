@@ -5,7 +5,7 @@ Powered by [exchangeratesapi.io](https://exchangeratesapi.io/).
 
 [Click here!](https://mxtng.github.io/currencyExchange/)
 
-## Snapshot v1
+## Snapshot (v1)
 <p align="center">
   <img src="src/img/v1.png" height="80%"/>
 </p>
